@@ -31,8 +31,8 @@
 
 ```sh
 sudo dnf -y install docker
-sudo systemctl start docker
-sudo systemctl enable docker
+sudo systemctl start podman
+sudo systemctl enable podman
 ```
 
 ### 2.安装 Ansible 和模块依赖项
