@@ -78,7 +78,7 @@ ls -lh
 添加一个新的自定义资源定义(CRD) API，名为PodSet, APIVersion为 `app.example.com/v1alpha1` ， Kind为 `PodSet`。该命令还将创建我们的引用控制器逻辑和[Kustomize](https://kustomize.io/)配置文件。
 
 ```
-cd /root/projects/podset-operator && \
+cd $HOME/projects/podset-operator && \
   operator-sdk create api --group=app --version=v1alpha1 --kind=PodSet --resource --controller
 ```
 
@@ -89,7 +89,7 @@ cd /root/projects/podset-operator && \
 让我们从检查新生成的 `api/v1alpha1/podset_types.go` 文件开始。从 **Visual Editor** 选项卡打开PodSet API，或者直接运行终端:
 
 ```
-cd /root/projects/podset-operator && \
+cd $HOME/projects/podset-operator && \
   cat api/v1alpha1/podset_types.go
 ```
 
@@ -202,7 +202,7 @@ oc get crd podsets.app.example.com -o yaml
 现在让我们观察默认的 `controllers/podset_controller.go` 文件:
 
 ```
-cd /root/projects/podset-operator && \
+cd $HOME/projects/podset-operator && \
   cat controllers/podset_controller.go
 ```
 
@@ -413,8 +413,8 @@ go mod tidy
 该命令一旦运行，将阻塞当前会话。您可以通过打开一个新的终端窗口来继续与OpenShift集群交互。您可以通过按 `CTRL + C`。
 
 ```
-cd /root/projects/podset-operator && \
-  MATCH_NAMESPACE=myproject KUBECONFIG=/root/.kube/config make run
+cd $HOME/projects/podset-operator && \
+  MATCH_NAMESPACE=myproject KUBECONFIG=$HOME/.kube/config make run
 ```
 
 在一个新的终端中，检查Custom Resource清单:
