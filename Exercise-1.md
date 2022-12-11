@@ -95,7 +95,7 @@ cd $HOME/projects/podset-operator && \
 
 在Kubernetes中，每个函数对象（除了一些例外，例如ConfigMap）都包含 `spec` 和 `status`。Kubernetes通过协期望状态(Spec)和实际集群状态来发挥作用。然后记录观察到的情况（Status）。
 
-还要注意在整个文件中发现的 `+kubebuilder` 注释标记。 `operator-sdk` 使用一个名为[controller- gen](https://github.com/kubernetes-sigs/controller-tools)的工具(来自[controller-tools](https://github.com/kubernetes-sigs/controller-tools)项目)来生成实用程序代码和Kubernetes YAML。更多关于配置/代码生成标记的信息可以在这里(https://book.kubebuilder.io/reference/markers.html)找到。
+还要注意在整个文件中发现的 `+kubebuilder` 注释标记。 `operator-sdk` 使用一个名为[controller- gen](https://github.com/kubernetes-sigs/controller-tools)的工具(来自[controller-tools](https://github.com/kubernetes-sigs/controller-tools)项目)来生成实用程序代码和Kubernetes YAML。更多关于配置/代码生成标记的信息可以在这里 (https://book.kubebuilder.io/reference/markers.html) 找到。
 
 现在让我们修改 `api/v1alpha1/podset_types.go` 文件中 `PodSet` 自定义资源(CR)的 `PodSetSpec` 和 `PodSetStatus` 。
 
