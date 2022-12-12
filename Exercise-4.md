@@ -26,15 +26,15 @@ Quay.io 是 Red Hat 提供的容器镜像仓库。您可以创建自己的帐户
 
 创建公共开放的Repository，例如名为operator-helloworld。
 
-<img title="" src="file:///C:/Users/zhuhe/Desktop/Operator Labs/openshift-operator-workshop/assets/07.png" alt="" width="415">
+<img title="" src="./assets/07.png" alt="" width="415">
 
 在右上角的Account Setting菜单打开账户设置页面，然后点击生成加密口令，输入密码后再点击Verify。
 
-<img title="" src="file:///C:/Users/zhuhe/Desktop/Operator Labs/openshift-operator-workshop/assets/05.png" alt="">
+<img title="" src="./assets/05.png" alt="">
 
 在打开的对话框中选择“Docker Login”菜单，复制包含加密口令的Docker Login命令。
 
-<img title="" src="file:///C:/Users/zhuhe/Desktop/Operator Labs/openshift-operator-workshop/assets/06.png" alt="">
+<img title="" src="./assets/06.png" alt="">
 
 执行此命令，例如：
 
@@ -55,7 +55,7 @@ sudo make docker-build docker-push IMG=quay.io/xxxxx/operator-helloworld:latest
 
 检查`operator-helloworld`您的 quay.io 帐户中的镜像设为公开。登录quya.io，点击图片。在“设置”（左下方），可以选择公开镜像。
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-00.png)
+<img title="" src="./assets/ex-3-00.png" alt="">
 
 ### 第 3 步：将 Operator 部署到 OpenShift 集群
 
@@ -144,7 +144,7 @@ operator-helloworld-controller-manager   1/1     1            1           37s
 
 *可选*：打开您的 RedHat OpenShift Web 控制台，选择`Developer 视图`和`Topology`. 确保您在`operator-helloworld-system`项目中。
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-02.png)
+<img title="" src="./assets/ex-3-02.png" alt="">
 
 ### 第 4 步：使用部署`Helloworld`应用
 
@@ -172,20 +172,20 @@ operator-helloworld-controller-manager    1/1     1            1           12m
 
 *可选：* 打开您的 RedHat OpenShift Web 控制台，选择`Developer perspective`和`Topology`. 确保您在`operator-helloworld-system`项目中。
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-03.png)
+<img title="" src="./assets/ex-3-03.png" alt="">
 
 *可选：* 打开您的 RedHat OpenShift Web 控制台，选择`Administrator 视图` 和`Custom Resource Definition`
 
 - 搜索`Hello`并点击`Hello` CRD
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-05.png)
+<img title="" src="./assets/ex-3-05.png" alt="">
 
 现在你看到两个两个已经创建的`hello-sample` 应用。
 
 - `operator-helloworld`项目中的一个是在本地机器上创建运行的operator
 - `operator-helloworld-system`项目中的一个是 `helloworld-controller-manager`在 RedHat OpenShift Cluster创建的
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-04.png)
+<img title="" src="./assets/ex-3-04.png" alt="">
 
 ### 第 5 步：清理应用程序[¶](https://thomassuedbroecker.github.io/operator-helloworld/exercises/03-exercise/#step-5-cleanup-application "永久链接")
 
@@ -201,7 +201,8 @@ oc delete hello hello-sample -n operator-helloworld-system
 
 你看到还剩下一个。
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-06.png)
+<img title="" src="./assets/ex-3-06.png" alt="">
+
 
 ### 第 6 步：验证operator是否仍在`operator-helloworld-system`项目部署中。
 
@@ -255,6 +256,6 @@ No resources found in operator-helloworld-system namespace.
 
 您还可以在 Web 控制台中找找名为`hello`的`Customer Resource Definition` 。
 
-![](https://thomassuedbroecker.github.io/operator-helloworld/images/ex-3-07.png)
+<img title="" src="./assets/ex-3-07.png" alt="">
 
 **恭喜**，如果做到这一步，说明您基本了解如何在 Ansible 中编写自己的operator了！
