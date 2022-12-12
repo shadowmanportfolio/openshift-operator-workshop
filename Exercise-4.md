@@ -16,7 +16,7 @@
 
 - 使用operator创建 HelloWorld 应用程序：
 
-![](C:\Users\zhuhe\Desktop\Operator%20Labs\openshift-operator-workshop\assets\ex-3-02-create-app-operator.gif)
+<img title="" src="./assets/ex-3-02-create-app-operator.gif" alt="">
 
 ### 第一步：创建 Quay.io 账户
 
