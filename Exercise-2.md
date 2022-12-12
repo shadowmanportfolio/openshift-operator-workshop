@@ -158,7 +158,7 @@ vi watches.yaml
 vi roles/hello/tasks/main.yml
 ```
 
-要添加到的内容`main.yml`
+要添加到 `main.yml` 的内容
 
 ```shell
 ---
