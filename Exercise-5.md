@@ -472,13 +472,25 @@ oc get services
 
 ### 更新Memcached自定义资源
 
-现在让我们更新Memcached `example` Custom Resource，并将期望的副本数量增加到 `5`:
+现在让我们更新Memcached `example` Custom Resource，并将期望的副本数量变为 `0`:
 
 ```
-oc patch memcached memcached-sample -p '{"spec":{"replicaCount": 3}}' --type=merge
+oc patch memcached memcached-sample -p '{"spec":{"replicaCount": 0}}' --type=merge
 ```
 
-验证Memcached Stateful Set正在创建两个额外的pod:
+验证Memcached Stateful Set正在终止pod:
+
+```
+oc get pods
+```
+
+现在让我们更新Memcached `example` Custom Resource，并将期望的副本数量变为 `1`:
+
+```
+oc patch memcached memcached-sample -p '{"spec":{"replicaCount": 1}}' --type=merge
+```
+
+验证Memcached Stateful Set正在重建pod:
 
 ```
 oc get pods
