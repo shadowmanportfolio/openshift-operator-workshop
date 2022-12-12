@@ -59,7 +59,7 @@ sudo make docker-build docker-push IMG=quay.io/xxxxx/operator-helloworld:latest
 
 ### 第三步：将 Operator 部署到 OpenShift 集群
 
-修改 `config/default/manager_auth_proxy_patch.yaml`文件，解决镜像的UID必须为固定65532的问题。增加 `runAsUser: 65532`配置。
+修改 `config/default/manager_auth_proxy_patch.yaml`文件，增加 `runAsNonRoot: true` 配置。
 
 ```
 vi config/default/manager_auth_proxy_patch.yaml
@@ -75,7 +75,7 @@ spec:
           capabilities:
             drop:
               - "ALL"
-          runAsUser: 65532
+          runAsNonRoot: true
 ```
 
 默认情况下，operator将部署到名为`operator-helloworld-system`的命名空间。 operator名为`operator-helloworld-controller-manager`。
@@ -242,7 +242,7 @@ service "operator-helloworld-controller-manager-metrics-service" deleted
 deployment.apps "operator-helloworld-controller-manager" deleted
 ```
 
-### 第 8 步：验证operator是否已删除
+### 第八步：验证operator是否已删除
 
 ```
 oc get deployment -n operator-helloworld-system
