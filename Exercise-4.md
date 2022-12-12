@@ -12,7 +12,7 @@
 
 - 部署operator：
 
-![](.\assets\ex-3-01-deploy-operator.gif)
+<img title="" src="./assets/ex-3-01-deploy-operator.gif" alt="">
 
 - 使用operator创建 HelloWorld 应用程序：
 
