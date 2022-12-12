@@ -39,7 +39,7 @@ Quay.io 是 Red Hat 提供的容器镜像仓库。您可以创建自己的帐户
 执行此命令，例如：
 
 ```shell
-docker login -u="xxxxx" -p="N1Kq0xR60e49wzg/TXJpLdwjng+EMC0qh56RY/0Jj27McW0ZESK5wYvEGkcL7aki" quay.io
+sudo docker login -u="xxxxx" -p="N1Kq0xR60e49wzg/TXJpLdwjng+EMC0qh56RY/0Jj27McW0ZESK5wYvEGkcL7aki" quay.io
 
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
 Login Succeeded!
