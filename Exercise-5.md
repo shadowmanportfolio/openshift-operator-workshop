@@ -220,7 +220,7 @@ INSERT INTO bank.accounts VALUES (1234, 10000.50);
 SELECT * FROM bank.accounts;
 ```
 
-Exit the SQL prompt:
+退出 SQL 提示符：
 
 ```
 \q
