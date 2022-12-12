@@ -16,7 +16,7 @@
 
 它不需要手动调用Helm来重新配置应用程序。
 
-## 从Helm图创建一个CockroachDB operator
+## 从Helm Charts创建一个CockroachDB operator
 
 在本教程中，我们将从现有的 [CockroachDB Helm Chart](https://github.com/helm/charts/tree/master/stable/cockroachdb) 创建一个cockachdb operator。
 
