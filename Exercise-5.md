@@ -112,7 +112,7 @@ WATCH_NAMESPACE=myproject make run
 
 ### 应用CockroachDB自定义资源
 
-从导航到 `cockroachdb-operator` 顶层目录:
+导航到 `cockroachdb-operator` 顶层目录:
 
 ```
 cd projects/cockroachdb-operator
