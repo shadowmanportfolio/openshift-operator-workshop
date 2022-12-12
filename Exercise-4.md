@@ -57,7 +57,7 @@ sudo make docker-build docker-push IMG=quay.io/xxxxx/operator-helloworld:latest
 
 <img title="" src="./assets/ex-3-00.png" alt="">
 
-### 第 3 步：将 Operator 部署到 OpenShift 集群
+### 第三步：将 Operator 部署到 OpenShift 集群
 
 修改 `config/default/manager_auth_proxy_patch.yaml`文件，解决镜像的UID必须为固定65532的问题。增加 `runAsUser: 65532`配置。
 
@@ -146,7 +146,7 @@ operator-helloworld-controller-manager   1/1     1            1           37s
 
 <img title="" src="./assets/ex-3-02.png" alt="">
 
-### 第 4 步：使用部署`Helloworld`应用
+### 第四步：使用部署`Helloworld`应用
 
 使用我们刚刚部署到`operator-helloworld-system`项目中的 Operator，我们现在将使用 CR 部署应用程序。
 
@@ -187,7 +187,7 @@ operator-helloworld-controller-manager    1/1     1            1           12m
 
 <img title="" src="./assets/ex-3-04.png" alt="">
 
-### 第 5 步：清理应用程序[¶](https://thomassuedbroecker.github.io/operator-helloworld/exercises/03-exercise/#step-5-cleanup-application "永久链接")
+### 第五步：清理应用程序[¶](https://thomassuedbroecker.github.io/operator-helloworld/exercises/03-exercise/#step-5-cleanup-application "永久链接")
 
 删除 CR 将删除由它创建的所有对象，因为这些对象链接到 CR。
 
@@ -204,7 +204,7 @@ oc delete hello hello-sample -n operator-helloworld-system
 <img title="" src="./assets/ex-3-06.png" alt="">
 
 
-### 第 6 步：验证operator是否仍在`operator-helloworld-system`项目部署中。
+### 第六步：验证operator是否仍在`operator-helloworld-system`项目部署中。
 
 ```
 oc get deployment -n operator-helloworld-system
@@ -217,7 +217,7 @@ NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
 operator-helloworld-controller-manager   1/1     1            1           153m
 ```
 
-### 第 7 步：清理operator
+### 第七步：清理operator
 
 这将删除 Operator、CRD 和所有角色。
 
