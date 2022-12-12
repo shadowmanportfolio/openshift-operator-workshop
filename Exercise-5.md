@@ -85,7 +85,7 @@ operator-sdk create api --helm-chart=cockroachdb --helm-chart-repo=https://chart
  `watches.yaml` 文件将组、版本和类型映射到特定的Helm Chart。观察 `watches.yaml` 的内容:
 
 ```
-cd /root/projects/cockroachdb-operator/ && \
+cd $HOME/projects/cockroachdb-operator/ && \
   cat watches.yaml
 ```
 
@@ -353,7 +353,7 @@ operator-sdk create api --helm-chart memcached --helm-chart-repo=https://charts.
  `watches.yaml` 文件将组、版本和类型映射到特定的Helm Chart。观察 `watches.yaml` 的内容:
 
 ```
-cd /root/projects/memcached-operator && \
+cd $HOME/projects/memcached-operator && \
   cat watches.yaml
 ```
 
@@ -362,7 +362,7 @@ cd /root/projects/memcached-operator && \
 应用Memcached自定义资源定义到集群:
 
 ```
-cd /root/projects/memcached-operator && \
+cd $HOME/projects/memcached-operator && \
   oc apply -f config/crd/bases/charts.example.com_memcacheds.yaml
 ```
 
