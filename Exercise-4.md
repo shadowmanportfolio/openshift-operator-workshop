@@ -258,4 +258,4 @@ No resources found in operator-helloworld-system namespace.
 
 <img title="" src="./assets/ex-3-07.png" alt="">
 
-**恭喜**，如果做到这一步，说明您基本了解如何在 Ansible 中编写自己的operator了！
+**恭喜**，如果做到这一步，说明您基本了解如何用 Ansible 编写自己的operator了！
