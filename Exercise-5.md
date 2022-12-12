@@ -379,10 +379,10 @@ WATCH_NAMESPACE=myproject make run
 
 ### 应用Memcached自定义资源
 
-打开 *Terminal 1* 选项卡，导航到 `memcached-operator` 顶级目录:
+打开一个新的终端，导航到 `memcached-operator` 个顶级目录:
 
 ```
-cd projects/memcached-operator
+cd $projects/memcached-operator
 ```
 
 在应用Memcached自定义资源之前，观察Memcached Helm Chart `values.yaml`:
